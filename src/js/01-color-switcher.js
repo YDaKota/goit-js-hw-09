@@ -12,10 +12,12 @@ const onStartBtnClick = () => {
     timerId = setInterval(() => {
         document.body.style.backgroundColor = getRandomHexColor();
     }, 1000);
+    startBtn.disabled = true;
 }
 
 const onStopBtnClick = () => {
     clearInterval(timerId);
+    startBtn.disabled = false;
 }
 
 startBtn.addEventListener('click', onStartBtnClick);
